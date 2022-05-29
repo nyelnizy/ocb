@@ -1,0 +1,215 @@
+I, [2022-05-29T21:46:32.954365 #10556]  INFO -- : Registered expected interaction GET /api/users?email=yhiamdan%40gmail.com&password=1234
+D, [2022-05-29T21:46:32.955530 #10556] DEBUG -- : {
+  "description": "A GET request for a user with email yhiamdan@gmail.com and password 1234",
+  "providerState": "There is a user with email yhiamdan@gmail.com and password 1234",
+  "request": {
+    "method": "GET",
+    "path": "/api/users",
+    "query": {
+      "email": [
+        "yhiamdan@gmail.com"
+      ],
+      "password": [
+        "1234"
+      ]
+    },
+    "headers": {
+      "Accept": "application/json"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "city": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "Accra"
+      },
+      "email": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "yhiamdan@gmail.com"
+      },
+      "first_name": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "Daniel"
+      },
+      "id": {
+        "json_class": "Pact::SomethingLike",
+        "contents": 1
+      },
+      "last_name": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "Addae"
+      },
+      "role": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "consumer"
+      },
+      "town": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "Ablekuma"
+      }
+    }
+  },
+  "metadata": null
+}
+I, [2022-05-29T21:46:32.983438 #10556]  INFO -- : Received request GET /api/users?email=yhiamdan@gmail.com&password=1234
+D, [2022-05-29T21:46:32.984161 #10556] DEBUG -- : {
+  "path": "/api/users",
+  "query": "email=yhiamdan@gmail.com&password=1234",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:60410",
+    "User-Agent": "Go-http-client/1.1",
+    "Accept": "application/json",
+    "Accept-Encoding": "gzip",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2022-05-29T21:46:32.985171 #10556]  INFO -- : Found matching response for GET /api/users?email=yhiamdan%40gmail.com&password=1234
+D, [2022-05-29T21:46:32.985171 #10556] DEBUG -- : {
+  "status": 200,
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "city": {
+      "json_class": "Pact::SomethingLike",
+      "contents": "Accra"
+    },
+    "email": {
+      "json_class": "Pact::SomethingLike",
+      "contents": "yhiamdan@gmail.com"
+    },
+    "first_name": {
+      "json_class": "Pact::SomethingLike",
+      "contents": "Daniel"
+    },
+    "id": {
+      "json_class": "Pact::SomethingLike",
+      "contents": 1
+    },
+    "last_name": {
+      "json_class": "Pact::SomethingLike",
+      "contents": "Addae"
+    },
+    "role": {
+      "json_class": "Pact::SomethingLike",
+      "contents": "consumer"
+    },
+    "town": {
+      "json_class": "Pact::SomethingLike",
+      "contents": "Ablekuma"
+    }
+  }
+}
+I, [2022-05-29T21:46:32.998628 #10556]  INFO -- : Verifying - interactions matched
+I, [2022-05-29T21:46:33.014471 #10556]  INFO -- : Cleared interactions
+I, [2022-05-29T21:46:33.030316 #10556]  INFO -- : Registered expected interaction GET /api/users?id=1
+D, [2022-05-29T21:46:33.031317 #10556] DEBUG -- : {
+  "description": "A GET request for a user with id 1",
+  "providerState": "There is a user with id 1",
+  "request": {
+    "method": "GET",
+    "path": "/api/users",
+    "query": {
+      "id": [
+        "1"
+      ]
+    },
+    "headers": {
+      "Accept": "application/json"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "city": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "Accra"
+      },
+      "email": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "yhiamdan@gmail.com"
+      },
+      "first_name": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "Daniel"
+      },
+      "id": {
+        "json_class": "Pact::SomethingLike",
+        "contents": 1
+      },
+      "last_name": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "Addae"
+      },
+      "role": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "consumer"
+      },
+      "town": {
+        "json_class": "Pact::SomethingLike",
+        "contents": "Ablekuma"
+      }
+    }
+  },
+  "metadata": null
+}
+I, [2022-05-29T21:46:33.047321 #10556]  INFO -- : Received request GET /api/users?id=1
+D, [2022-05-29T21:46:33.047610 #10556] DEBUG -- : {
+  "path": "/api/users",
+  "query": "id=1",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:60410",
+    "User-Agent": "Go-http-client/1.1",
+    "Accept": "application/json",
+    "Accept-Encoding": "gzip",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2022-05-29T21:46:33.047988 #10556]  INFO -- : Found matching response for GET /api/users?id=1
+D, [2022-05-29T21:46:33.047988 #10556] DEBUG -- : {
+  "status": 200,
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "city": {
+      "json_class": "Pact::SomethingLike",
+      "contents": "Accra"
+    },
+    "email": {
+      "json_class": "Pact::SomethingLike",
+      "contents": "yhiamdan@gmail.com"
+    },
+    "first_name": {
+      "json_class": "Pact::SomethingLike",
+      "contents": "Daniel"
+    },
+    "id": {
+      "json_class": "Pact::SomethingLike",
+      "contents": 1
+    },
+    "last_name": {
+      "json_class": "Pact::SomethingLike",
+      "contents": "Addae"
+    },
+    "role": {
+      "json_class": "Pact::SomethingLike",
+      "contents": "consumer"
+    },
+    "town": {
+      "json_class": "Pact::SomethingLike",
+      "contents": "Ablekuma"
+    }
+  }
+}
+I, [2022-05-29T21:46:33.062172 #10556]  INFO -- : Verifying - interactions matched
+I, [2022-05-29T21:46:33.064587 #10556]  INFO -- : Cleared interactions

@@ -1,0 +1,83 @@
+definitions:
+  domain.Token:
+    properties:
+      access:
+        example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+        type: string
+      refresh:
+        example: 57283ca5-6cdd-4751-8839-8193e280fe23
+        type: string
+    type: object
+info:
+  contact: {}
+paths:
+  /api/v1/login:
+    post:
+      consumes:
+      - application/json
+      description: Login by submitting email and password
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/domain.Token'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "422":
+          description: Unprocessed Entity
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Login endpoint
+      tags:
+      - auth
+  /api/v1/logout:
+    post:
+      consumes:
+      - application/json
+      description: An authenticated user can logout using this endpoint
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Logged Out Successfully
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: Logout endpoint
+      tags:
+      - auth
+  /api/v1/refresh/{token}:
+    post:
+      consumes:
+      - application/json
+      description: Refresh token by submitting a valid refresh token
+      parameters:
+      - description: 103ce042-c9ef-451e-a74e-a7e8d36cd3bd
+        in: path
+        name: token
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/domain.Token'
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Refresh token endpoint
+      tags:
+      - auth
+swagger: "2.0"

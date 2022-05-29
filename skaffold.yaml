@@ -1,0 +1,16 @@
+apiVersion: skaffold/v2beta9
+kind: Config
+build:
+  tagPolicy:
+    sha256: {}
+  artifacts:
+    - image: authms
+      context: .
+      sync:
+        infer:
+          - "**/*"
+deploy:
+  kubectl:
+    manifests:
+      - ../kubernettes/authms/deployment.yaml
+      - ../kubernettes/authms/service.yaml
